@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agencia Marketing Pro</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1 class="logo">Marketing Pro</h1>
+    <button id="menu-toggle" class="menu-btn">☰</button>
+    <nav id="nav" class="nav">
+      <a href="#servicios">Servicios</a>
+      <a href="#clientes">Clientes</a>
+      <a href="#cotizacion">Cotización</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Servicios destacados -->
+    <section id="servicios" class="servicios">
+      <h2>Servicios Destacados</h2>
+      <div class="grid-servicios">
+        <article class="servicio" data-nombre="Estrategia Digital">
+          <h3>Estrategia Digital</h3>
+          <p>Diseño de campañas integrales para potenciar tu marca.</p>
+          <button class="btn-info">Más info</button>
+        </article>
+        <article class="servicio" data-nombre="SEO & SEM">
+          <h3>SEO & SEM</h3>
+          <p>Optimización para buscadores y gestión de anuncios pagos.</p>
+          <button class="btn-info">Más info</button>
+        </article>
+        <article class="servicio" data-nombre="Social Media">
+          <h3>Social Media</h3>
+          <p>Creación de contenido y manejo de redes sociales.</p>
+          <button class="btn-info">Más info</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- Clientes anteriores -->
+    <section id="clientes" class="clientes">
+      <h2>Clientes Anteriores</h2>
+      <div class="slider">
+        <button id="prev" class="slider-btn">‹</button>
+        <div class="slider-track">
+          <article class="cliente active" data-nombre="Empresa Alpha">
+            <img src="logo-alpha.png" alt="Logo Empresa Alpha" />
+          </article>
+          <article class="cliente" data-nombre="Beta Corp">
+            <img src="logo-beta.png" alt="Logo Beta Corp" />
+          </article>
+          <article class="cliente" data-nombre="Gamma LLC">
+            <img src="logo-gamma.png" alt="Logo Gamma LLC" />
+          </article>
+        </div>
+        <button id="next" class="slider-btn">›</button>
+      </div>
+    </section>
+
+    <!-- Formulario de cotización -->
+    <section id="cotizacion" class="cotizacion">
+      <h2>Solicita tu Cotización</h2>
+      <form id="cotizacion-form">
+        <label>
+          Nombre completo
+          <input type="text" id="nombre" required />
+        </label>
+        <label>
+          Empresa
+          <input type="text" id="empresa" required />
+        </label>
+        <label>
+          Email
+          <input type="email" id="email" required />
+        </label>
+        <label>
+          Servicio
+          <select id="servicio" required>
+            <option value="">Selecciona...</option>
+            <option value="Estrategia Digital">Estrategia Digital</option>
+            <option value="SEO & SEM">SEO & SEM</option>
+            <option value="Social Media">Social Media</option>
+          </select>
+        </label>
+        <label class="full-width">
+          Mensaje
+          <textarea id="mensaje" rows="4" required></textarea>
+        </label>
+        <button type="submit" class="btn-submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Agencia Marketing Pro. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

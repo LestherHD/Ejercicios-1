@@ -1,0 +1,192 @@
+:root {
+  --primary-color: #1a3e6c;
+  --accent-color: #e67e22;
+  --bg-light: #f5f5f5;
+  --text-color: #333;
+  --max-width: 1200px;
+  --gap: 1rem;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header y navegación */
+.site-header {
+  background: var(--primary-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--gap);
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+.menu-btn {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  display: none;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--gap);
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Contenedor principal */
+.container {
+  flex: 1;
+  max-width: var(--max-width);
+  margin: var(--gap) auto;
+  padding: 0 var(--gap);
+}
+
+/* Oferta Académica */
+.programas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--gap);
+  margin-bottom: 2rem;
+}
+
+.programa {
+  background: white;
+  padding: var(--gap);
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.programa h3 {
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.btn-details {
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Eventos */
+.eventos-lista {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap);
+  margin-bottom: 2rem;
+}
+
+.evento {
+  background: white;
+  padding: var(--gap);
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.evento h3 {
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+/* Noticias */
+.noticias-list {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.noticias-list li {
+  background: white;
+  padding: var(--gap);
+  margin-bottom: var(--gap);
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.noticias-list strong {
+  color: var(--primary-color);
+}
+
+.btn-read-more {
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: var(--gap);
+}
+
+/* Contacto */
+.contacto {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contacto .social {
+  display: flex;
+  justify-content: center;
+  gap: var(--gap);
+}
+
+.contacto a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: var(--gap);
+  margin-top: auto;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+  
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: var(--primary-color);
+    width: 100%;
+    padding: var(--gap);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .eventos-lista {
+    grid-template-columns: 1fr;
+  }
+}

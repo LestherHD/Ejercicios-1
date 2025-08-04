@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechNews</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1 class="logo">TechNews</h1>
+    <button id="menu-toggle" class="menu-btn">☰</button>
+    <nav id="nav" class="nav">
+      <a href="#filtro">Categorías</a>
+      <a href="#noticias">Últimas</a>
+      <a href="#suscribe">Suscríbete</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Filtro por categoría -->
+    <section id="filtro" class="filtro">
+      <label for="categoria">Filtrar por categoría:</label>
+      <select id="categoria">
+        <option value="Todas">Todas</option>
+        <option value="Hardware">Hardware</option>
+        <option value="Software">Software</option>
+        <option value="IA">IA</option>
+        <option value="Gadgets">Gadgets</option>
+      </select>
+    </section>
+
+    <!-- Muro de publicaciones -->
+    <section id="noticias" class="noticias-grid">
+      <article class="post" data-category="Hardware" data-title="Nuevo CPU 5nm">
+        <h2>Nuevo CPU 5nm revoluciona el mercado</h2>
+        <p>Un fabricante lanza su chip más eficiente con arquitectura de 5 nm y rendimiento mejorado.</p>
+        <button class="btn-read">Leer más</button>
+      </article>
+
+      <article class="post" data-category="Software" data-title="Actualización de SO">
+        <h2>Actualización de sistema operativo disponible</h2>
+        <p>La última versión incorpora mejoras en seguridad y nuevas funciones de privacidad.</p>
+        <button class="btn-read">Leer más</button>
+      </article>
+
+      <article class="post" data-category="IA" data-title="IA crea arte digital">
+        <h2>IA crea arte digital ultra realista</h2>
+        <p>Algoritmos generan imágenes que compiten con creaciones humanas.</p>
+        <button class="btn-read">Leer más</button>
+      </article>
+
+      <article class="post" data-category="Gadgets" data-title="Smartwatch plegable">
+        <h2>Smartwatch plegable llega al mercado</h2>
+        <p>Innovador dispositivo portátil que se ajusta al tamaño de tu muñeca.</p>
+        <button class="btn-read">Leer más</button>
+      </article>
+    </section>
+
+    <!-- Suscripción -->
+    <section id="suscribe" class="suscribe">
+      <h2>Suscríbete a nuestro boletín</h2>
+      <form id="suscribe-form">
+        <label>
+          Email:
+          <input type="email" id="email" required />
+        </label>
+        <button type="submit">Suscribirme</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 TechNews. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

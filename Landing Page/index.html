@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ark: Survival Evolved</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <h1 class="logo">Ark: Survival Evolved</h1>
+    <button id="menu-btn" class="menu-btn">☰</button>
+    <nav id="nav-links" class="nav-links">
+      <a href="#hero">Inicio</a>
+      <a href="#features">Características</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="hero-text">
+        <h2>Ark: Survival Evolved</h2>
+        <p>Sumérgete en un mundo salvaje donde la supervivencia lo es todo. Enfréntate a dinosaurios gigantes, construye tu base desde cero y forma tribus para dominar la isla. ARK combina exploración, estrategia y acción en una experiencia que evoluciona contigo. ¿Estás listo para sobrevivir?</p>
+        <button id="cta-btn" class="btn">Quiero saber más</button>
+      </div>
+      <div class="hero-image">
+        <img src="ark_survival_evolved-3914996.webp" alt="Producto destacado" />
+      </div>
+    </section>
+
+    <!-- Características -->
+    <section id="features" class="features">
+      <h2>Características clave</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>🌍 Mundo abierto inmersivo</h3>
+          <p>Explora vastos entornos llenos de vida salvaje, desde selvas tropicales hasta cuevas heladas.</p>
+        </article>
+        <article class="card">
+          <h3>🦕 Domesticación de criatura</h3>
+          <p>Captura y entrena más de 100 especies, desde velociraptores hasta dragones, cada uno con habilidades únicas.</p>
+        </article>
+        <article class="card">
+          <h3>🧠 Progresión y tecnología</h3>
+          <p>Evoluciona desde herramientas primitivas hasta armas futuristas y monturas voladoras.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Formulario de contacto -->
+    <section id="contacto" class="contacto">
+      <h2>Contáctanos</h2>
+      <form id="form-contacto">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required />
+
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 LestherHD. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

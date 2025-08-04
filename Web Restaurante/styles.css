@@ -1,0 +1,196 @@
+:root {
+  --primary: #a03e3e;
+  --accent: #e5b75d;
+  --light: #fafafa;
+  --dark-text: #333;
+  --gap: 1rem;
+  --max-w: 1000px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: var(--dark-text);
+  background: var(--light);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.site-header {
+  background: var(--primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--gap);
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  gap: var(--gap);
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.container {
+  display: grid;
+  font-size: 1;
+  grid-template-columns: 1fr 1fr 1fr; /* tres columnas iguales */
+  gap: var(--gap);
+  max-width: var(--max-w);
+  margin: var(--gap) auto;
+  padding: 0 var(--gap);
+}
+
+/* Menú del Día */
+.platos {
+  display: grid;
+  font-size: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--gap);
+  margin-bottom: 2rem;
+  justify-content: start;
+}
+
+.plato {
+  background: white;
+  font-size: 2rem;
+  padding: 1.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.plato h3 {
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+.btn-info {
+  background: var(--accent);
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Reservas */
+.reservas form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap);
+  background: white;
+  padding: var(--gap);
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+.reservas label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.reservas input {
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.reservas button {
+  grid-column: span 2;
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Contacto */
+.contacto {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contacto a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.mapa {
+  margin-top: var(--gap);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+.site-footer {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: var(--gap);
+  margin-top: auto;
+}
+
+.menu-dia {
+  grid-column: 1;
+}
+
+.reservas {
+  grid-column: 2;
+}
+
+.contacto {
+  grid-column: 3;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: var(--primary);
+    padding: var(--gap);
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .reservas form {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AppFit - Tu coach de entrenamiento</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1 class="logo">AppFit</h1>
+    <button id="menu-toggle" class="menu-btn">☰</button>
+    <nav id="nav" class="nav">
+      <a href="#screenshots">Capturas</a>
+      <a href="#beneficios">Beneficios</a>
+      <a href="#download">Descargar</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Sección de capturas de pantalla -->
+    <section id="screenshots" class="screenshots">
+      <h2>Capturas de Pantalla</h2>
+      <div class="slider">
+        <button id="prev" class="slider-btn">‹</button>
+        <div class="slider-track">
+          <article class="slide active" data-title="Inicio">
+            <img src="screenshot1.png" alt="Pantalla de inicio" />
+          </article>
+          <article class="slide" data-title="Progreso">
+            <img src="screenshot2.png" alt="Pantalla de progreso" />
+          </article>
+          <article class="slide" data-title="Rutinas">
+            <img src="screenshot3.png" alt="Pantalla de rutinas" />
+          </article>
+        </div>
+        <button id="next" class="slider-btn">›</button>
+      </div>
+    </section>
+
+    <!-- Sección de beneficios -->
+    <section id="beneficios" class="beneficios">
+      <h2>Beneficios de AppFit</h2>
+      <div class="grid-beneficios">
+        <article class="beneficio">
+          <h3>Entrenamientos Personalizados</h3>
+          <p>Rutinas diseñadas según tu nivel y objetivos.</p>
+        </article>
+        <article class="beneficio">
+          <h3>Seguimiento en Tiempo Real</h3>
+          <p>Mide tu rendimiento y progreso día tras día.</p>
+        </article>
+        <article class="beneficio">
+          <h3>Comunidad y Retos</h3>
+          <p>Únete a grupos, participa en retos y mantente motivado.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sección de descarga -->
+    <section id="download" class="download">
+      <h2>Descarga la App</h2>
+      <button id="download-btn" class="btn-download">¡Descargar ahora!</button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 AppFit. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

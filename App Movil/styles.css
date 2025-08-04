@@ -1,0 +1,172 @@
+:root {
+  --primary-color: #2a9d8f;
+  --accent-color: #e76f51;
+  --bg-light: #f0f4f8;
+  --text-color: #333;
+  --gap: 1rem;
+  --max-width: 1000px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--text-color);
+  background: var(--bg-light);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header y navegación */
+.site-header {
+  background: var(--primary-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--gap);
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  gap: var(--gap);
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Contenedor principal */
+.container {
+  flex: 1;
+  max-width: var(--max-width);
+  margin: var(--gap) auto;
+  padding: 0 var(--gap);
+}
+
+/* Slider de capturas */
+.slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.slider-track {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.slide {
+  min-width: 100%;
+  flex-shrink: 0;
+  display: none;
+  justify-content: center;
+  background: white;
+}
+
+.slide.active {
+  display: flex;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+}
+
+.slider-btn {
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Beneficios */
+.grid-beneficios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--gap);
+  margin-bottom: 2rem;
+}
+
+.beneficio {
+  background: white;
+  padding: var(--gap);
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.beneficio h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+/* Descarga */
+.download {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.btn-download {
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: var(--gap);
+  margin-top: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: var(--primary-color);
+    padding: var(--gap);
+  }
+
+  .nav.active {
+    display: flex;
+  }
+}

@@ -1,0 +1,167 @@
+:root {
+  --primary: #2c3e50;
+  --accent: #e74c3c;
+  --bg: #ecf0f1;
+  --text: #2c3e50;
+  --gap: 1rem;
+  --max-w: 600px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.site-header {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: var(--gap);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-w);
+  margin: var(--gap) auto;
+  padding: 0 var(--gap);
+  overflow-x: hidden;
+}
+
+.inscripcion {
+  background: white;
+  padding: var(--gap);
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.inscripcion h2 {
+  margin-bottom: var(--gap);
+  text-align: center;
+  color: var(--primary);
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap);
+}
+
+.campo {
+  margin-bottom: 0.75rem;
+}
+
+.campo.full-width {
+  grid-column: span 2;
+}
+
+label {
+  margin-bottom: 0.25rem;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+button[type="submit"],
+.btn-reset {
+  width: 100%;
+}
+
+fieldset {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+fieldset label {
+  margin-bottom: 0.5rem;
+}
+
+legend {
+  font-weight: bold;
+}
+
+.botones {
+  display: flex;
+  justify-content: space-between;
+}
+
+button[type="submit"],
+.btn-reset {
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+button[type="submit"] {
+  background: var(--accent);
+  color: white;
+}
+
+.btn-reset {
+  background: #bdc3c7;
+  color: var(--text);
+}
+
+.site-footer {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: var(--gap);
+  margin-top: auto;
+}
+
+@media (max-width: 600px) {
+
+    body {
+    font-size: 1rem;
+  }
+
+  label,
+  legend {
+    font-size: 1rem;
+  }
+}
+
+
+  .container {
+    padding: 0 0.5rem;
+  }
+
+  .inscripcion {
+    padding: 1rem 0.5rem;
+  }
+
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  .campo.full-width {
+    grid-column: 1;
+  }
+
+  fieldset {
+    padding: 0.75rem;
+  }
+
+  .botones {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: stretch;
+  }
+
+  button[type="submit"],
+  .btn-reset {
+    width: 100%;
+  }

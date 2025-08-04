@@ -1,0 +1,173 @@
+:root {
+  --primary: #0d47a1;
+  --accent: #ff6f00;
+  --bg: #f4f7fa;
+  --text: #333;
+  --gap: 1rem;
+  --maxW: 1100px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+.site-header {
+  background: var(--primary);
+  color: white;
+  padding: var(--gap);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  gap: var(--gap);
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Contenedor */
+.container {
+  flex: 1;
+  max-width: var(--maxW);
+  margin: var(--gap) auto;
+  padding: 0 var(--gap);
+}
+
+/* Filtro */
+.filtro {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+}
+
+.filtro label {
+  font-weight: bold;
+}
+
+.filtro select {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* Muro de publicaciones */
+.noticias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--gap);
+  margin-bottom: 2rem;
+}
+
+.post {
+  background: white;
+  padding: var(--gap);
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.post h2 {
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+.btn-read {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Suscripción */
+.suscribe {
+  background: white;
+  padding: var(--gap);
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.suscribe form {
+  display: flex;
+  justify-content: center;
+  gap: var(--gap);
+}
+
+.suscribe input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.suscribe button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: var(--gap);
+  margin-top: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    background: var(--primary);
+    padding: var(--gap);
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .suscribe form {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Universidad Mariano</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <h1 class="logo">Universidad Mariano Galvez</h1>
+    <button id="menu-btn" class="menu-btn">☰</button>
+    <nav id="nav-links" class="nav-links">
+      <a href="#academica">Oferta Académica</a>
+      <a href="#eventos">Eventos</a>
+      <a href="#noticias">Noticias</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Oferta Académica -->
+    <section id="academica" class="academica">
+      <h2>Oferta Académica</h2>
+      <div class="programas">
+        <article class="programa" data-nombre="Ingeniería Informática">
+          <h3>Ingeniería Informática</h3>
+          <p>Formación en desarrollo de software, redes y sistemas.</p>
+          <button class="btn-details">Ver detalles</button>
+        </article>
+        <article class="programa" data-nombre="Derecho">
+          <h3>Derecho</h3>
+          <p>Estudio de leyes, ética y justicia social.</p>
+          <button class="btn-details">Ver detalles</button>
+        </article>
+        <article class="programa" data-nombre="Administración de Empresas">
+          <h3>Administración de Empresas</h3>
+          <p>Gestión, finanzas y liderazgo organizacional.</p>
+          <button class="btn-details">Ver detalles</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- Calendario de Eventos -->
+    <section id="eventos" class="eventos">
+      <h2>Calendario de Eventos</h2>
+      <div class="eventos-lista">
+        <article class="evento" data-titulo="Jornada de Puertas Abiertas" data-fecha="15 Mayo 2025">
+          <h3>Jornada de Puertas Abiertas</h3>
+          <p>Conoce nuestras instalaciones y programas académicos.</p>
+          <button class="btn-details">Detalles</button>
+        </article>
+        <article class="evento" data-titulo="Feria de Emprendimiento" data-fecha="30 Junio 2025">
+          <h3>Feria de Emprendimiento</h3>
+          <p>Emprendedores presentan sus proyectos innovadores.</p>
+          <button class="btn-details">Detalles</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- Noticias Institucionales -->
+    <section id="noticias" class="noticias">
+      <h2>Noticias Institucionales</h2>
+      <ul class="noticias-list">
+        <li data-titulo="Nueva Biblioteca Digital" >
+          <strong>12 Abr 2025:</strong> Lanzamos nuestra biblioteca digital…
+          <button class="btn-read-more">Leer más</button>
+        </li>
+        <li data-titulo="Convenio Internacional" >
+          <strong>01 Mar 2025:</strong> Firma de acuerdo con universidad aliada…
+          <button class="btn-read-more">Leer más</button>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="contacto">
+      <h2>Contacto</h2>
+      <p>Escríbenos a <a href="mailto:marianogalvez@edu.gt">marianogalvez@edu.gt</a> o síguenos en redes:</p>
+      <div class="social">
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Universidad Mariano Galvez. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
