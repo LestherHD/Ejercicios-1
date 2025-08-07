@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tienda La Colina</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <h1 class="logo">Tienda La Colina</h1>
+  <button id="menu-btn" class="menu-btn" aria-label="Abrir menú">☰</button>
+  <nav id="nav-links" class="nav-links">
+    <a href="#">Inicio</a>
+    <a href="#">Productos</a>
+    <a href="#">Contacto</a>
+  </nav>
+</header>
+
+<main class="content">
+  <section class="productos" aria-label="Catálogo de productos">
+    <article class="producto" data-id="A">
+      <figure>
+        <img src="modelo-de-moda-masculina-que-promueve-trajes-de-actividades-deportivas-al-aire-libre.jpg" alt="Camisa Polo" />
+        <figcaption>Camisa Polo</figcaption>
+      </figure>
+      <p>Diseñada para actividades al aire libre, esta camisa polo combina estilo deportivo con comodidad.</p>
+      <button class="btn-comprar">Comprar</button>
+    </article>
+
+    <article class="producto" data-id="B">
+      <figure>
+        <img src="par-de-calcetines.jpg" alt="Calcetines" />
+        <figcaption>Calcetines</figcaption>
+      </figure>
+      <p>Suaves y resistentes, ofrecen confort diario y un ajuste perfecto.</p>
+      <button class="btn-comprar">Comprar</button>
+    </article>
+
+    <article class="producto" data-id="C">
+      <figure>
+        <img src="zapatos-de-moda-y-zapatillas.jpg" alt="Zapatos" />
+        <figcaption>Zapatos</figcaption>
+      </figure>
+      <p>Zapatillas modernas que fusionan moda y funcionalidad, perfectas para caminar con estilo.</p>
+      <button class="btn-comprar">Comprar</button>
+    </article>
+  </section>
+
+  <aside class="carrito" aria-label="Carrito de compras">
+    <h2>Carrito</h2>
+    <ul id="lista-carrito">
+      <!-- Productos agregados aparecerán aquí -->
+    </ul>
+  </aside>
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2025 Tienda La Colina-LestherHD. Todos los derechos reservados.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

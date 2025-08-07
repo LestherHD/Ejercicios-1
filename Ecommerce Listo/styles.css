@@ -1,0 +1,236 @@
+:root {
+  --primary-color: #610027;
+  --accent-color: #912B48;
+  --bg-light: #FBD0D9;
+  --text-color: #222;
+  --max-width: 1200px;
+  --gap: 1rem;
+  --border-radius: 6px;
+  --transition-speed: 0.3s;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-color);
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.site-header {
+  background: var(--primary-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--gap);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.menu-btn {
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--gap);
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.3rem 0.6rem;
+  border-radius: var(--border-radius);
+  transition: background-color var(--transition-speed);
+}
+
+.nav-links a:hover {
+  background-color: var(--accent-color);
+}
+
+/* Main content layout */
+.content {
+  flex: 1;
+  max-width: var(--max-width);
+  margin: var(--gap) auto;
+  padding: 0 var(--gap);
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--gap);
+  min-width: 0;
+}
+
+/* Productos */
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--gap);
+}
+
+.producto {
+  background: white;
+  border: 1px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.producto figure {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.producto img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-speed);
+}
+
+.producto:hover img {
+  transform: scale(1.05);
+}
+
+.producto figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(97, 0, 39, 0.8);
+  color: white;
+  width: 100%;
+  padding: 0.4rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.producto p {
+  flex: 1;
+  padding: var(--gap);
+  font-size: 0.9rem;
+  color: var(--accent-color);
+}
+
+.btn-comprar {
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  font-weight: bold;
+  transition: background-color var(--transition-speed);
+}
+
+.btn-comprar:hover {
+  background: var(--primary-color);
+}
+
+.btn-details:hover,
+.btn-read-more:hover {
+  background: #d16715; /* tono más oscuro del acento */
+}
+
+/* Carrito */
+.carrito {
+  background: white;
+  border: 1px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  padding: var(--gap);
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.carrito h2 {
+  color: var(--primary-color);
+  margin-bottom: var(--gap);
+}
+
+.carrito ul {
+  list-style: none;
+  padding-left: 0;
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+.carrito li {
+  background: var(--accent-color);
+  color: white;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: var(--gap);
+  margin-top: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: var(--primary-color);
+    width: 100%;
+    max-width: 250px;
+    flex-direction: column;
+    display: none;
+    padding: var(--gap);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    z-index: 200;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+    padding: 0 var(--gap);
+  }
+
+  .carrito {
+    max-height: none;
+    margin-top: var(--gap);
+  }
+}

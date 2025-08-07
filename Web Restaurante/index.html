@@ -1,83 +1,64 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Restaurante La Sazón</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
 
-  <header class="site-header">
-    <h1 class="logo">Restaurante La Sazón</h1>
-    <button id="menu-toggle" class="menu-btn">☰</button>
-    <nav id="nav" class="nav">
-      <a href="#menu-dia">Menú del Día</a>
-      <a href="#reservas">Reservas</a>
-      <a href="#contacto">Contacto</a>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurante Delicioso</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>Restaurante Delicioso</h1>
+    <nav>
+      <ul>
+        <li><a href="#menu-dia">Menú del Día</a></li>
+        <li><a href="#reservacion">Reservación</a></li>
+        <li><a href="#ubicacion">Ubicación</a></li>
+      </ul>
     </nav>
   </header>
 
-  <main class="container">
+  <main class="contenido">
     <!-- Menú del Día -->
-    <section id="menu-dia" class="menu-dia">
+    <section id="menu-dia">
       <h2>Menú del Día</h2>
-      <div class="platos">
-        <article class="plato" data-nombre="Sopa de Mariscos">
-          <h3>Sopa de Mariscos</h3>
-          <p>Caliente y reconfortante, con camarones y almejas frescas.</p>
-          <button class="btn-info">Más info</button>
-        </article>
-        <article class="plato" data-nombre="Pollo a la Parrilla">
-          <h3>Pollo a la Parrilla</h3>
-          <p>Marinado en especias, servido con ensalada fresca.</p>
-          <button class="btn-info">Más info</button>
-        </article>
-        <article class="plato" data-nombre="Risotto de Champiñones">
-          <h3>Risotto de Champiñones</h3>
-          <p>Arroz cremoso con setas salteadas y parmesano.</p>
-          <button class="btn-info">Más info</button>
-        </article>
-      </div>
+      <ul>
+        <li>Entrada: Ensalada fresca</li>
+        <li>Plato fuerte: Pollo al ajillo con papas</li>
+        <li>Postre: Flan casero</li>
+        <li>Bebida: Limonada natural</li>
+      </ul>
     </section>
 
-    <!-- Reservas -->
-    <section id="reservas" class="reservas">
-      <h2>Haz tu Reserva</h2>
-      <form id="reserva-form">
-        <label>
-          Nombre completo:
-          <input type="text" id="nombre" required />
-        </label>
-        <label>
-          Fecha y hora:
-          <input type="datetime-local" id="fecha-hora" required />
-        </label>
-        <label>
-          Personas:
-          <input type="number" id="personas" min="1" max="10" required />
-        </label>
+    <!-- Reservación -->
+    <section id="reservacion">
+      <h2>Haz tu reservación</h2>
+      <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha" required>
+
+        <label for="personas">Número de personas:</label>
+        <input type="number" id="personas" name="personas" required>
+
         <button type="submit">Reservar</button>
       </form>
     </section>
 
-    <!-- Contacto y Mapa -->
-    <section id="contacto" class="contacto">
-      <h2>Contacto</h2>
-      <p>Teléfono: <a href="tel:+50212345678">+502 1234-5678</a></p>
-      <p>Email: <a href="mailto:info@lasazon.gt">info@lasazon.gt</a></p>
-      <div class="mapa">
-        <iframe>
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1928.853933858106!2d-90.19959416005456!3d14.785477737320308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589ef906fce1f9d%3A0xcac2a1d1656decfe!2sRestaurante%20La%20Nueva%20China!5e0!3m2!1ses-419!2sgt!4v1754337431620!5m2!1ses-419!2sgt" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
+    <!-- Mapa -->
+    <section id="ubicacion">
+      <h2>Encuéntranos aquí</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3857.347174053499!2d-90.19001686101917!3d14.805760869797698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589ee532beb942d%3A0x6cc3c1d3abe3fcd3!2sComedor%20Mariela%202!5e0!3m2!1ses-419!2sgt!4v1754604101228!5m2!1ses-419!2sgt" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <p>&copy; 2025 Restaurante La Sazón. Todos los derechos reservados.</p>
+  <footer>
+    <p>&copy; 2025 Restaurante Delicioso. Todos los derechos reservados.</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
+
 </html>
