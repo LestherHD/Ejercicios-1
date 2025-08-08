@@ -14,7 +14,6 @@
 }
 
 body {
-  overflow: hidden;
   font-family: Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
@@ -35,7 +34,6 @@ body {
   max-width: var(--max-w);
   margin: var(--gap) auto;
   padding: 0 var(--gap);
-  overflow-x: hidden;
 }
 
 .inscripcion {
@@ -68,28 +66,38 @@ form {
 label {
   margin-bottom: 0.25rem;
   font-weight: bold;
+  display: block;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="tel"],
-select,
-button[type="submit"],
-.btn-reset {
+select {
   width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input.error,
+select.error {
+  border-color: var(--accent);
 }
 
 fieldset {
-  width: 100%;
-  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: var(--gap);
 }
 
 fieldset label {
+  display: block;
   margin-bottom: 0.5rem;
 }
 
 legend {
   font-weight: bold;
+  padding: 0 0.5rem;
 }
 
 .botones {
@@ -102,6 +110,8 @@ button[type="submit"],
   font-size: 1rem;
   padding: 1rem;
   border-radius: 6px;
+  border: none;
+  cursor: pointer;
 }
 
 button[type="submit"] {
@@ -122,27 +132,8 @@ button[type="submit"] {
   margin-top: auto;
 }
 
+/* Responsive */
 @media (max-width: 600px) {
-
-    body {
-    font-size: 1rem;
-  }
-
-  label,
-  legend {
-    font-size: 1rem;
-  }
-}
-
-
-  .container {
-    padding: 0 0.5rem;
-  }
-
-  .inscripcion {
-    padding: 1rem 0.5rem;
-  }
-
   form {
     grid-template-columns: 1fr;
   }
@@ -151,17 +142,13 @@ button[type="submit"] {
     grid-column: 1;
   }
 
-  fieldset {
-    padding: 0.75rem;
-  }
-
   .botones {
     flex-direction: column;
     gap: 0.75rem;
-    align-items: stretch;
   }
 
   button[type="submit"],
   .btn-reset {
     width: 100%;
   }
+}

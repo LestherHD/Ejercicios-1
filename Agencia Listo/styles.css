@@ -1,7 +1,7 @@
 :root {
-  --primary-color: #2a9d8f;
-  --accent-color: #e76f51;
-  --bg-light: #f0f4f8;
+  --primary-color: #004d40;
+  --accent-color: #ffab00;
+  --bg-light: #f9f9f9;
   --text-color: #333;
   --gap: 1rem;
   --max-width: 1000px;
@@ -13,8 +13,13 @@
   box-sizing: border-box;
 }
 
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: Arial, sans-serif;
   color: var(--text-color);
   background: var(--bg-light);
   display: flex;
@@ -30,6 +35,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: var(--gap);
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -48,6 +54,7 @@ body {
 .nav {
   display: flex;
   gap: var(--gap);
+  flex-wrap: wrap;
 }
 
 .nav a {
@@ -61,43 +68,73 @@ body {
   max-width: var(--max-width);
   margin: var(--gap) auto;
   padding: 0 var(--gap);
+  width: 100%;
 }
 
-/* Slider de capturas */
+/* Servicios */
+.grid-servicios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--gap);
+  margin-bottom: 2rem;
+}
+
+.servicio {
+  background: white;
+  padding: var(--gap);
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.servicio h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.btn-info {
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Slider de clientes */
 .slider {
   position: relative;
   display: flex;
   align-items: center;
   margin-bottom: 2rem;
+  overflow: hidden;
 }
 
 .slider-track {
   display: flex;
-  overflow: hidden;
   width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  gap: var(--gap);
+  transition: transform 0.3s ease;
 }
 
-.slide {
+.cliente {
   min-width: 100%;
   flex-shrink: 0;
   display: none;
   justify-content: center;
+  align-items: center;
   background: white;
+  padding: 2rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
-.slide.active {
+.cliente.active {
   display: flex;
 }
 
-.slide img {
-  width: 100%;
-  height: auto;
-}
-
 .slider-btn {
-  background: rgba(0,0,0,0.5);
+  background: var(--primary-color);
   color: white;
   border: none;
   font-size: 2rem;
@@ -107,38 +144,42 @@ body {
   cursor: pointer;
 }
 
-/* Beneficios */
-.grid-beneficios {
+/* Formulario de cotización */
+.cotizacion form {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--gap);
-  margin-bottom: 2rem;
-}
-
-.beneficio {
   background: white;
   padding: var(--gap);
   border-radius: 6px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.beneficio h3 {
-  color: var(--primary-color);
-  margin-bottom: 0.5rem;
+.cotizacion label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
 }
 
-/* Descarga */
-.download {
-  text-align: center;
-  margin-bottom: 2rem;
+.cotizacion .full-width {
+  grid-column: span 2;
 }
 
-.btn-download {
-  background: var(--accent-color);
+.cotizacion input,
+.cotizacion select,
+.cotizacion textarea {
+  margin-top: 0.25rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn-submit {
+  grid-column: span 2;
+  background: var(--primary-color);
   color: white;
   border: none;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
+  padding: 0.75rem;
   border-radius: 4px;
   cursor: pointer;
 }
@@ -150,6 +191,7 @@ body {
   text-align: center;
   padding: var(--gap);
   margin-top: auto;
+  width: 100%;
 }
 
 /* Responsive */
@@ -169,4 +211,24 @@ body {
   .nav.active {
     display: flex;
   }
+
+  .cotizacion form {
+    grid-template-columns: 1fr;
+  }
+
+  .cotizacion .full-width {
+    grid-column: span 1;
+  }
+
+  .slider-btn {
+    font-size: 1.5rem;
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+input,
+textarea {
+  width: 100%;
+  max-width: 100%;
 }
